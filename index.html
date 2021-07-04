@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+</head>
+<body>
+    <div class="loader">
+        <hr/>
+        <hr/>
+        <hr/>
+        <hr/>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #dedede;
+    }
+
+    .loader{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+    }
+    .loader hr{
+        border: 0;
+        margin: 0;
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        border-radius: 50%;
+        animation: spinner 2s ease infinite;
+    }
+    .loader :first-child{
+        background-color: red;
+        animation-delay: -1.5s;
+    }
+    .loader :nth-child(2){
+        background-color: green;
+        animation-delay: -1s;
+    }
+    .loader :nth-child(3){
+        background-color: blue;
+        animation-delay: -0.5s;
+    }
+    .loader :last-child{
+        background-color: purple;
+    }
+
+@keyframes spinner{
+    0%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translate(160%);
+    }
+    50%{
+        transform: translate(160%,160%);
+    }
+    75%{
+        transform: translate(0,160%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+    
+</style>
+</html>
